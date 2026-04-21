@@ -1,6 +1,6 @@
-# TOTP 2FA Client
+# HOTP 2FA Client
 
-React frontend for the TOTP 2FA demo application.
+React frontend for the HOTP 2FA demo application.
 
 ## Quick Start
 
@@ -26,8 +26,8 @@ App runs on `http://localhost:3000` (or next available port)
 
 ### Login Flow
 1. Enter username and password
-2. If 2FA is enabled, enter OTP from your authenticator app
-3. Or use a backup code if OTP unavailable
+2. If 2FA is enabled, enter HOTP from your counter-based authenticator
+3. Or use a backup code if unavailable
 
 ### Setup 2FA with Mobile Authenticator (QR Flow)
 
@@ -37,7 +37,7 @@ App runs on `http://localhost:3000` (or next available port)
 3. A QR code will be displayed on screen
 
 **Step 2: Scan with Your Phone**
-1. Open your authenticator app (Google Authenticator, Authy, Microsoft Authenticator, etc.)
+1. Open your counter-based authenticator app (must support HOTP/counter-based OTP)
 2. Scan the QR code displayed on the web page
 3. If you can't scan, you can manually enter the secret code shown below the QR
 
@@ -45,6 +45,8 @@ App runs on `http://localhost:3000` (or next available port)
 1. After scanning, your authenticator app will show a 6-digit code
 2. Enter that code in the input field on the web page
 3. Click "Confirm & Enable 2FA"
+
+**Note**: HOTP is counter-based. Each login attempt increments the counter. Your authenticator must advance its counter to match.
 
 Your device is now registered and can be used for login!
 

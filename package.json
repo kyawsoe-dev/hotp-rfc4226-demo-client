@@ -1,6 +1,7 @@
 {
-  "name": "client",
+  "name": "hotp-rfc4226-demo-client",
   "version": "0.1.0",
+  "description": "HOTP RFC4226 demo application client",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
